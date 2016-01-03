@@ -16,3 +16,11 @@ $ sudo npm install
 ```
 $ npm test
 ```
+
+### Run App
+
+``` Create bundle.js in public folder
+$ webpack -w
+```
+
+Then. open `public/index.html` file in any browser.

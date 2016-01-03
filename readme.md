@@ -19,7 +19,7 @@ $ npm test
 
 ### Run App
 
-Create bundle.js in public folder
+Create <b>bundle.js</b> in public folder by the command:
 ```
 $ webpack -w
 ```

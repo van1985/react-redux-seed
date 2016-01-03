@@ -19,8 +19,9 @@ $ npm test
 
 ### Run App
 
-``` Create bundle.js in public folder
+Create bundle.js in public folder
+```
 $ webpack -w
 ```
 
-Then. open `public/index.html` file in any browser.
+Then. open <b>public/index.html</b> file in any browser.

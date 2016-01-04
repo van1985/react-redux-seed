@@ -1,7 +1,7 @@
 var RewirePlugin = require('rewire-webpack');
 
 module.exports ={
-  entry: "./src/components/counter.js",
+  entry: "./src/app.js",
   output:{
     filename: "public/bundle.js"
   },

@@ -1,13 +1,8 @@
-var React = require('react'),
-var HelloWorld = React.createClass({
-    render: function(){
-        return (
-            <h1>Hello, world!</h1>
-        );
-    }
-});
+var React = require('react');
+var ReactDOM = require('react-dom');
+import Counter from '../src/components/Counter';
 
-React.renderComponent(
-    <HelloWorld />,
-    document.getElementById('container')
-);
+
+//ReactDOM.render(<Counter />, document.getElementById('app'));
+
+ReactDOM.render(<Counter />, document.getElementById('app'));

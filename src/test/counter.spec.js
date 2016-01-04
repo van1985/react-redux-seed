@@ -35,15 +35,6 @@ describe('Counter', ()=>{
     * Check if the class is inactive
     **/
     it ('should show the counter as inactive - class', ()=>{
-      /*
-      const renderer = TestUtils.createRenderer();
-      renderer.render(<Counter isActive={false} />);
-      const actual = renderer.getRenderOutput()
-        .props.className.includes('inactive counter');
-      console.log(actual);
-      const expected =true;
-      */
-
       expect(renderCounter(false,'inactive')).toEqual(true);
     });
 
@@ -51,16 +42,17 @@ describe('Counter', ()=>{
     * Check if the class is active
     **/
     it ('should show the counter as active - class', ()=>{
-      /*
-      const renderer = TestUtils.createRenderer();
-      renderer.render(<Counter isActive={true} />);
-      const actual = renderer.getRenderOutput()
-        .props.className.includes('active counter');
-      const expected =true;
-      */
-
       expect(renderCounter(true,'active')).toEqual(true);
     });
+
+    it ('should render number of counts correctly', ()=>{
+      const renderer = TestUtils.createRenderer();
+      renderer.render(<Counter count={5}/>);
+      const actual = renderer.getRenderOutput();
+      const expected ='5 likes';
+      expect(actual).toIncludeJSX(expected);
+    });
+
   });
 
 });

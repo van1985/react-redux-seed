@@ -10,22 +10,36 @@ export default React.createClass({
 
   incrementCount: function(){
     this.setState({
-      count: this.state.count + 1
+      count: this.state.count + 1,
+      isActive: true
     });
+    this.state.isActive=true;
+
+  },
+  decrementCount: function(){
+    this.setState({
+      count: this.state.count - 1
+    });
+    if (this.state.count<0 || this.state.count==1){
+      this.state.isActive=false;
+    }
+
   },
   getInitialState: function(){
      return {
-       count: 0
+       count: 0,
+       isActive: null
      }
   },
   render: function(){
+    //TODO: Don't like this behavir for a class variable
+    this.state.isActive = this.state.isActive === null ? this.props.isActive : this.state.isActive;
     return (
-      <div className="counter">
+      <div className={ this.state.isActive === true ? 'active counter' : 'inactive counter'}>
         <h1>{this.state.count}</h1>
         <button type="button" className="btn" onClick={this.incrementCount}>Increment</button>
+        <button type="button" className="btn left-mg" onClick={this.decrementCount}>Decrement</button>
       </div>
     );
   }
 });
-
-//ReactDOM.render(<Counter />, document.getElementById('app'));

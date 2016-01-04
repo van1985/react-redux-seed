@@ -1,3 +1,5 @@
+var RewirePlugin = require('rewire-webpack');
+
 module.exports ={
   entry: "./src/components/counter.js",
   output:{
@@ -14,5 +16,8 @@ module.exports ={
         }
       }
     ]
-  }
+  },
+  plugins: [
+		new RewirePlugin()
+	]
 }

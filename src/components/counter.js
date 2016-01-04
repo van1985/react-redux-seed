@@ -1,7 +1,13 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+import TestUtils from 'react-addons-test-utils';
+import expect from 'expect';
 
-var Counter = React.createClass({
+
+export default React.createClass({
+
+  displayName: 'Counter',
+
   incrementCount: function(){
     this.setState({
       count: this.state.count + 1
@@ -22,4 +28,4 @@ var Counter = React.createClass({
   }
 });
 
-ReactDOM.render(<Counter />, document.getElementById('app'));
+//ReactDOM.render(<Counter />, document.getElementById('app'));

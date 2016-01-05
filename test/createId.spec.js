@@ -1,5 +1,5 @@
 import expect from 'expect';
-import createId from '../utilities/createId';
+import createId from '../src/utilities/createId';
 
 describe('createId', ()=>{
 

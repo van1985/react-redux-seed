@@ -1,6 +1,6 @@
 {
   "scripts" : {
-    "test" : "mocha './src/test/utils/tests.js' --compilers js:babel/register --recursive"
+    "test" : "mocha src/test/utils/tests.js --compilers js:babel/register --recursive"
   },
   "dependencies" : {
     "react" : "0.14.5",

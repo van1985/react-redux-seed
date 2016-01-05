@@ -1,7 +1,7 @@
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 import expect from 'expect';
-import Counter from '../components/Counter';
+import Counter from '../src/components/counter';
 import expectJSX from 'expect-jsx';
 expect.extend(expectJSX);
 

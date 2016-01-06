@@ -9,11 +9,8 @@
 | ------------- | ------------- |
 | react  | 0.14.5  |
 | react-dom  |  0.14.3  |
-| react-dom  |  0.14.3  |
-| react-dom  |  0.14.3  |
-| react-dom  |  0.14.3  |
-| react-dom  |  0.14.3  |
-| react-dom  |  0.14.3  |
+| react-redux  |  4.0.6  |
+| redux  |  3.0.5  |
 
 ## Usage
 

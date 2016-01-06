@@ -3,7 +3,6 @@ var ReactDOM = require('react-dom');
 import TestUtils from 'react-addons-test-utils';
 import expect from 'expect';
 
-
 export default React.createClass({
 
   displayName: 'Counter',
@@ -36,10 +35,12 @@ export default React.createClass({
     this.state.isActive = this.state.isActive === null ? this.props.isActive : this.state.isActive;
     this.state.count = this.state.count === null ? this.props.count : this.state.count;
     return (
-      <div className={ this.state.isActive === true ? 'active counter' : 'inactive counter'}>
-        <h1>{this.state.count} likes</h1>
-        <button type="button" className="btn" onClick={this.incrementCount}>Increment</button>
-        <button type="button" className="btn left-mg" onClick={this.decrementCount}>Decrement</button>
+      <div className="counter">
+        <div className={ this.state.isActive === true ? 'active counter-component' : 'inactive counter-component'}>
+          <h1>{this.state.count} likes</h1>
+          <button type="button" className="btn" onClick={this.incrementCount}>Increment</button>
+          <button type="button" className="btn left-mg" onClick={this.decrementCount}>Decrement</button>
+        </div>
       </div>
     );
   }

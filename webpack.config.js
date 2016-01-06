@@ -1,4 +1,4 @@
-var RewirePlugin = require('rewire-webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports ={
   entry: "./src/app.js",
@@ -14,10 +14,16 @@ module.exports ={
         query:{
           presets: ['react','es2015']
         }
+      },
+      {
+          test: /\.scss$/,
+          loader: ExtractTextPlugin.extract(
+            "style",
+            "css!sass")
       }
     ]
   },
   plugins: [
-		new RewirePlugin()
-	]
+    new ExtractTextPlugin('public/style.css')
+]
 }

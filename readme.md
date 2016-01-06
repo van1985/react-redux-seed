@@ -3,6 +3,13 @@
 
 `React` is a UI library developed at Facebook to facilitate the creation of interactive, stateful & reusable UI components. It is used at Facebook in production, and Instagram.com is written entirely in React.
 
+## Dependencies
+
+| Name  | Version |
+| ------------- | ------------- |
+| react  | 0.14.5  |
+| react-dom  |  0.14.3  |
+
 ## Usage
 
 ### Installation

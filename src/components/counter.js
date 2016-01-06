@@ -2,10 +2,15 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 import TestUtils from 'react-addons-test-utils';
 import expect from 'expect';
+import api from '../services/api';
 
 export default React.createClass({
 
   displayName: 'Counter',
+
+  componentDidMount: function() {
+    api.get('https://api.spotify.com/v1/albums/0sNOF9WDwhWunNAHPD3Baj');
+  },
 
   incrementCount: function(){
     this.setState({

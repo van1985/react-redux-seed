@@ -1,3 +1,30 @@
+
+import React, { Component, PropTypes } from 'react'
+
+class Counter extends Component {
+  render() {
+    const { increment, decrement, counter } = this.props
+    return (
+      <div className="counter">
+        <div className="active counter-component">
+          <h1>{counter} likes</h1>
+          <button type="button" className="btn" onClick={increment}>Increment</button>
+          <button type="button" className="btn left-mg" onClick={decrement}>Decrement</button>
+        </div>
+      </div>
+    )
+  }
+}
+
+Counter.propTypes = {
+  increment: PropTypes.func.isRequired,
+  decrement: PropTypes.func.isRequired,
+  counter: PropTypes.number.isRequired
+}
+
+export default Counter
+
+/*
 var React = require('react');
 var ReactDOM = require('react-dom');
 import TestUtils from 'react-addons-test-utils';
@@ -50,3 +77,4 @@ export default React.createClass({
     );
   }
 });
+*/

@@ -23,7 +23,7 @@
     "babel-preset-stage-2": "6.1.2",
     "expect": "^1.13.0",
     "expect-jsx": "2.1.2",
-    "jsdom": "^3.1.2",
+    "jsdom": "^7.0.0",
     "mocha": "^2.3.4",
     "react-addons-test-utils": "0.14.3",
     "redux-devtools": "^3.0.1",
